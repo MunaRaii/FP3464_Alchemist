@@ -34,4 +34,31 @@ public class ParkingMap {
             System.out.println("Please choose valid option.");
         }
     }
+
+    //method to display the parking map
+    public void displayParkingMap(){
+        for (int[] emptySlot : parkingSpace) {
+            for (int slots : emptySlot) {
+                System.out.println(
+                        slots == EMPTY ? "Empty" : "Occupied"
+                );
+            }
+        }
+    }
+
+    // method to check if a parking space is available
+    public boolean availableSpace(int row, int col){
+        return parkingSpace[row][col] == EMPTY;
+    }
+
+    // method to book parking space
+    public void bookSpace(int row, int col){
+        if(availableSpace(row, col)){
+            parkingSpace[row][col] = OCCUPIED;
+            System.out.println("Parking space booked.");
+        } else {
+            System.out.println("Selected parking space is already occupied.");
+        }
+    }
+
 }
