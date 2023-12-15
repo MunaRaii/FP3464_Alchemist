@@ -61,4 +61,13 @@ public class ParkingMap {
         }
     }
 
+    // method to free up a parking space
+    public void freeSpace(int row, int col){
+        if(parkingSpace[row][col] == OCCUPIED){
+            parkingSpace[row][col] = EMPTY;
+            System.out.println("Thank you for parking at our place. See you again!");
+        } else {
+            System.out.println("Selected parking space is already empty.");
+        }
+    }
 }
