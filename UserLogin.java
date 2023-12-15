@@ -56,4 +56,9 @@ public class UserLogin {
             throw new RuntimeException(ex);
         }
     }
+
+    public static void main(String[] args)
+    {
+        checkLoginUsers();
+    }
 }
