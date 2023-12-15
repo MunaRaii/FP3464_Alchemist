@@ -6,4 +6,7 @@ public enum Vehicle {
     Vehicle(double price){
         this.price = price;
     }
+    public double getPrice() {
+        return price;
+    }
 }
